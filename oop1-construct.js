@@ -1,6 +1,27 @@
 //1. Create a Class called WhyClass.  This class should have one property, and two methods.  THe property is called "purpose", and stores a string.  This string should clearly explain why classes are used in Object Oriented Programming.  The first method is called explain().  This method should print the contents stored in the purpose 'field' of the class.  The second method is called pieces().  This 2nd method should print out the various parts that are essential to building a class.  Instantiate the class, and invoke the method so the results are showing in the console once this file is run.
 
 //your code here...
+console.log("Problem 1");
+
+class WhyClass{
+
+    constructor(purpose){
+        this.purpose = purpose;
+    }
+
+    explain(){
+        console.log(this.purpose);
+    }
+
+    pieces(){
+        console.log("The keyword class, constuctor, and new, as well as properties and methods.");
+
+    }
+}
+
+const myExplain = new WhyClass("They are a great way to store multiple values and functions in something that is reusable.");
+myExplain.pieces();
+myExplain.explain();
 
 
 
@@ -11,15 +32,53 @@ Create a class that can categorize at least 6 of the creatures that you recall o
 
 //your code here...
 
+console.log("Problem 2");
+
+class Creature{
+    constructor(name, type, color, actions){
+        this.name = name;
+        this.type = type;
+        this.color = color;
+        this.actions = actions;
+        }
+    introduce(){
+        console.log(`Hello, I am the ${this.name} from the Amazon! I am a ${this.type}.`);
+        }
+    describe(){
+        console.log(`I am ${this.color}!`);
+        }
+    doThis(){
+        console.log(`I am super cool because I can ${this.actions.join(', and ')}!`);
+        }
+        
+    }
+
+    const riverDolphin = new Creature('River Dolphin', 'sea mammal', 'pink', ['eat small fish crabs and turtles', 'do tribal magic']);
+    const capybara = new Creature ('Capybara', 'rodent', 'brown', ['eat up to 8 pounds of grass per day', 'live in large groups']);
+    const otter = new Creature ('Giant River Otter', 'mammal', 'brown', ['attack in large groups', 'can attack an anaconda']);
+
+    riverDolphin.doThis();
+    otter.introduce();
+    capybara.describe();
+
 
 
 
 /*3. Convert the following Object Literals into a general class called Shape, and instantiate the class to generate the object literals
 */
-
+ console.log('Problem 3');
 
 class Shape {
     //your code here...
+
+    constructor(name, sides){
+        this.name = name;
+        this.sides = sides;
+    }
+
+    calcArea() {}
+    calcCircumference(){}
+    calcPerimeter(){}
 }
 
 
